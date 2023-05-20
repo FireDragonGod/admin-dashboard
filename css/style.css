@@ -64,6 +64,43 @@ table {
     grid-row: 2 / 4;
 }
 
+.header {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    padding: 1.5rem;
+}
+
+.input-search {
+    display: grid;
+    grid-template-columns: min-content 3fr;
+}
+
+.input-search > label > span {
+    padding-right: 1rem;
+}
+
+.input-search > input[type='search'] {
+    appearance: none;
+    border-radius: 1.5rem;
+    background-color: lightgray;
+    color: hsl(0, 0%, 0%, 0.9);
+    padding: 0.5rem 0.5rem;
+    font-size: 18px;
+    border: 0;
+}
+
+.input-search > input[type='search']:focus-visible {
+    outline: -2px solid hsl(0, 0%, 0%, 0.91);
+}
+
+.input-search > input[type="search"]:not(:focus, :active)::-webkit-search-cancel-button { 
+    display: none; 
+}
+
+.input-search > label {
+    display: grid;
+    align-items: center;
+}
 
 
 
