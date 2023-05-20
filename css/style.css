@@ -57,6 +57,7 @@ body {
 .container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: min-content 5fr;
 }
 
 .header {
@@ -76,7 +77,7 @@ body {
 
 .header {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
     align-items: center;
     padding: 0.5rem 3rem;
 }
@@ -137,3 +138,32 @@ body {
     align-items: center;
     column-gap: 1.5rem;
 }
+
+
+.greet-profile {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: auto auto;
+    align-items: center;
+    column-gap: 0.5rem;
+    padding-top: 1rem;
+    line-height: 1.5;
+}
+
+.greet-profile > div:first-child {
+    height: 75px;
+    width: 75px;
+}
+
+.greet-profile > div:first-child > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+}
+
+.greet-profile > div:last-child > p:last-child {
+    font-size: 24px;
+}
+
