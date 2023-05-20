@@ -42,11 +42,21 @@ table {
 	border-spacing: 0;
 }
 
+
+*,
+*::after,
+*::before {
+    --font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
 /* Start Here */
+
+body {
+    font-family: "Roboto", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";;
+}
 
 .container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr) ;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .header {
@@ -66,8 +76,9 @@ table {
 
 .header {
     display: grid;
-    grid-template-columns: 3fr 2fr;
-    padding: 1.5rem;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 0.5rem 3rem;
 }
 
 .input-search {
@@ -102,13 +113,27 @@ table {
     align-items: center;
 }
 
+.main-profile > div > div {
+    height: 50px;
+    width: 50px;
+}
 
+.main-profile > div > div> img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+}
 
+.main-profile {
+    display: grid;
+    justify-content: end;
+}
 
-
-
-
-
-
-
-
+.main-profile > div {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    column-gap: 1.5rem;
+}
